@@ -14,7 +14,7 @@ const handleforgotform=(e)=>{
 }
 
 const handleforgot=async()=>{
-  axios.post("http://localhost:8080/forgotpassword", forgotformdata)
+  axios.post("https://surender-backend.vercel.app/forgotpassword", forgotformdata)
 }
 
   return (

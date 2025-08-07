@@ -27,12 +27,12 @@ useEffect(()=>{
 
 
 const wishlistapi=(item)=>{
-  axios.post('http://localhost:8080/wishlist', item)
+  axios.post('https://surender-backend.vercel.app/wishlist', item)
 }
 
 
   const popularproductapi=()=>{
-axios.get('http://localhost:8080/allproducts').then((res)=>{
+axios.get('https://surender-backend.vercel.app/allproducts').then((res)=>{
   if(res.data.status){
     setpopularproduct(res.data.ouruser)
   }

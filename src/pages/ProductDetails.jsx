@@ -42,7 +42,7 @@ const ProductDetails = () => {
 
     // add to cart ------------------------
     let addcart=(cartproduct)=>{
-        axios.post('http://localhost:8080/addtocart',cartproduct).then((res)=>{
+        axios.post('https://surender-backend.vercel.app/addtocart',cartproduct).then((res)=>{
             if(res.data.status){
                 alert(res.data.msg)
             }else{

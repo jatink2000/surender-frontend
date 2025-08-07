@@ -16,7 +16,7 @@ const [productstate, setproductstate]=useState([])
     }, [])
 
   const productapi=async()=>{
-   await axios.get('http://localhost:8080/allproducts').then((res)=>{
+   await axios.get('https://surender-backend.vercel.app/allproducts').then((res)=>{
     console.log(res.data)
       if(res.data.status){
         setproductstate(res.data.ouruser)

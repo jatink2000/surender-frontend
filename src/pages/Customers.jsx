@@ -12,7 +12,7 @@ const Customers = () => {
 
   const allusers = () => {
     axios
-      .get('http://localhost:8080/allusers')
+      .get('https://surender-backend.vercel.app/allusers')
       .then((res) => {
         if (res.data.status) {
           setgetuser(res.data.ouruser);

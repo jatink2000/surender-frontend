@@ -10,7 +10,7 @@ const Wishlist = () => {
 
   const wishapi = () => {
     axios
-      .get('http://localhost:8080/allwishlistdata')
+      .get('https://surender-backend.vercel.app/allwishlistdata')
       .then((res) => {
         if (res.data.status) {
           setwishstate(res.data.cartdata);
@@ -24,7 +24,7 @@ const Wishlist = () => {
 
 
   const handledelete = (id) => {
-    axios.delete(`http://localhost:8080/wishlist/${id}`).then((res) => {
+    axios.delete(`https://surender-backend.vercel.app/wishlist/${id}`).then((res) => {
       if (res.status) {
         alert(res.data.msg)
         setwishstate((prev) => prev.filter((item) => item._id !== id));

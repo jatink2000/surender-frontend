@@ -21,7 +21,7 @@ const [getuser, setgetuser]=useState([])
   }, [])
 
   let allusers = () => {
-    axios.get('http://localhost:8080/allusers').then((res) => {
+    axios.get('https://surender-backend.vercel.app/allusers').then((res) => {
       if (res.data.status) {
         setgetuser(res.data.ouruser)
       }
@@ -43,7 +43,7 @@ const [getuser, setgetuser]=useState([])
       go('/signin')
     }else{
 3
-      axios.post('http://localhost:8080/signup',{formdata}).then((res) => {
+      axios.post('https://surender-backend.vercel.app/signup',{formdata}).then((res) => {
         // console.log(res.data)
         if (res.data.status) {
           alert(res.data.msg)

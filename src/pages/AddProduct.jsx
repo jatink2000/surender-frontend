@@ -34,7 +34,7 @@ const AddProduct = () => {
   const handleSubmit = async () => {
     console.log("Submitting...");
     try {
-      const res = await axios.post('http://localhost:8080/addproducts', AddProductData);
+      const res = await axios.post('https://surender-backend.vercel.app/addproducts', AddProductData);
       console.log("Response from backend:", res.data);
 
       alert('Product created successfully!');

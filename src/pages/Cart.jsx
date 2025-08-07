@@ -28,7 +28,7 @@ const Cart = ({ isOpen, onClose }) => {
 
   const Cartapi = () => {
     axios
-      .get('http://localhost:8080/allcartdata')
+      .get('https://surender-backend.vercel.app/allcartdata')
       .then((res) => {
         if (res.data.status) {
           const updated = res.data.cartdata.map((item) => ({
@@ -44,7 +44,7 @@ const Cart = ({ isOpen, onClose }) => {
   };
 
   const deleteapi = (item) => {
-    axios.post('http://localhost:8080/deleteapi', item).then((res) => {
+    axios.post('https://surender-backend.vercel.app/deleteapi', item).then((res) => {
       if (res.data.status) {
         alert(res.data.msg);
         setcartstate((prev) => prev.filter((i) => i._id !== item._id));
@@ -59,7 +59,7 @@ const Cart = ({ isOpen, onClose }) => {
     if (newQuantity < 1) return;
 
     axios
-      .patch(`http://localhost:8080/cart/${id}/quantity`, { quantity: newQuantity })
+      .patch(`https://surender-backend.vercel.app/cart/${id}/quantity`, { quantity: newQuantity })
       .then((res) => {
         if (res.data.status) {
           setcartstate((prev) =>
